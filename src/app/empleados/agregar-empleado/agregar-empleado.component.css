@@ -1,0 +1,12 @@
+.button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+
+.form_{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
