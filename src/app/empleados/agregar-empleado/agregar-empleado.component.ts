@@ -7,6 +7,7 @@ import { EmpleadosService } from '../empleados.service';
   templateUrl: './agregar-empleado.component.html',
   styleUrl: './agregar-empleado.component.css'
 })
+
 export class AgregarEmpleadoComponent {
 
   empleado: IEmpleados = {
@@ -27,6 +28,7 @@ export class AgregarEmpleadoComponent {
   constructor(private empleadosService: EmpleadosService) { }
 
   agregar() {
+    console.log(this.empleado)
     // Validaciones
     if (!this.empleado.numEmpleado || !this.empleado.nombre || !this.empleado.correo || !this.empleado.fechaNacimiento || !this.empleado.sexo) {
       return;
@@ -34,7 +36,6 @@ export class AgregarEmpleadoComponent {
 
     // Agregamos el nuevo empleado a través del servicio
     this.empleadosService.agregarEmpleado(this.empleado);
-    console.log(this.empleadosService.agregarEmpleado(this.empleado), this.empleado)
 
     // Limpiamos el formulario
     this.empleado = {

@@ -16,6 +16,7 @@ export class EmpleadosService {
   // Método para agregar un nuevo empleado
   agregarEmpleado(empleado: IEmpleados) {
     this._empleados.push(empleado);
+    console.log(empleado,this._empleados)
     this.actualizarLocalStorage();
   }
 

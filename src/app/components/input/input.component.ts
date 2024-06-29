@@ -14,7 +14,7 @@ export class InputComponent {
 
   @Output() onInputValue: EventEmitter<string> = new EventEmitter<string>();
 
-  inputValue: string = '';
+  @Input() inputValue: string = '';
 
   onInputChange(value: string): void {
     this.inputValue = value;
